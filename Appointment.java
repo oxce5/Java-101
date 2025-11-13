@@ -15,6 +15,10 @@ public class Appointment {
   public static Appointment makeAppointment(int id, String date, String time, String purpose, int status) {
     return new Appointment(id, date, time, purpose, status);
   }
+  @Override
+  public String toString() {  
+    return String.format("Appointment %d [Date: %s, Time: %s, Purpose %s, Status: %d]\n", id, date, time, purpose, status);
+  }
 }
 
 
