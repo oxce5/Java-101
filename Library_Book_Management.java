@@ -1,4 +1,3 @@
-import java.lang.module.FindException;
 import java.util.Scanner;
 
 public class Library_Book_Management {
@@ -27,19 +26,18 @@ public class Library_Book_Management {
           break;
       
         case "3":
-          System.exit(0);
           System.out.println("Exiting...");
-          break;
+          System.exit(0);
 
         case "exit":
-          System.exit(0);
           System.out.println("Exiting...");
-          break;
+          System.exit(0);
 
         default:
           System.out.println("Invalid input. Please try again.");
           continue;
       }
+      scan.close();
     }
   }
 
@@ -68,6 +66,7 @@ public class Library_Book_Management {
     }
     BookUtil(id, title, author, genre, stock);
     System.out.println("Book added successfully!");
+    scan.close();
   }
 
   public static void listBook() {
